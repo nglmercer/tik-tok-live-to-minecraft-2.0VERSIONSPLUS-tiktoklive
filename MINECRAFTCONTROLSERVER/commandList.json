@@ -1,0 +1,122 @@
+{
+    "chat": [
+        "/tellraw @a {\"text\":\"{uniqueId} : {comment} \", \"color\":\"green\"}",
+        "/execute at {playername} run give {playername} {item}"
+    ],
+    "likes": {
+        "default": ["/execute at {playername} run summon minecraft:zombie ~ ~ ~",
+            "/title @a title {\"text\":\" 50 likes \"}",
+            "/title @a subtitle {\"text\":\" {uniqueId} envio {likes} likes \",\"bold\":true,\"color\":\"gold\"}",
+            "/execute at {playername} run give @a minecraft:golden_apple 1"
+        ]
+    },
+    "gift": {
+        "default": [
+            "/tellraw @a {\"text\":\"{uniqueId}  sent a {giftName} x{repeatCount} \", \"color\":\"gold\"}",
+            "/title @a subtitle {\"text\":\"ENVIO {giftName} x{repeatCount} \",\"bold\":true,\"color\":\"gold\"}",
+            "/execute at {playername} run summon minecraft:zombie ~ ~ ~ {CustomName:'{\"text\":\"{uniqueId} \"}', CustomNameVisible:1}",
+            "/execute at {playername} run playsound minecraft:entity.player.levelup ambient @p",
+            "/execute at {playername} run give @a minecraft:golden_apple 5",
+            "/title @a title {\"text\":\"{uniqueId} \"}"
+        ],
+        "Rose": [
+            "/tellraw @a {\"text\":\"{uniqueId}  sent a {giftName} x{repeatCount} \", \"color\":\"gold\"}",
+            "/title @a subtitle {\"text\":\"ENVIO {giftName} x{repeatCount} \",\"bold\":true,\"color\":\"gold\"}",
+            "/execute at {playername} run summon minecraft:zombie ~ ~ ~ {CustomName:'{\"text\":\"{uniqueId} \"}', CustomNameVisible:1}",
+            "/execute at {playername} run playsound minecraft:entity.player.levelup ambient @p",
+            "/title @a title {\"text\":\"{uniqueId} \"}"
+        ],
+        "White Rose": [
+            "/tellraw @a {\"text\":\"{uniqueId}  sent a {giftName} x{repeatCount} \", \"color\":\"gold\"}",
+            "/title @a subtitle {\"text\":\"ENVIO {giftName} x{repeatCount} \",\"bold\":true,\"color\":\"gold\"}",
+            "/execute at {playername} run summon minecraft:spider ~ ~ ~ {CustomName:'{\"text\":\"{uniqueId} \"}', CustomNameVisible:1}",
+            "/execute at {playername} run playsound minecraft:entity.player.levelup ambient @p",
+            "/title @a title {\"text\":\"{uniqueId} \"}"
+        ],
+        "GG": [
+            "/tellraw @a {\"text\":\"{uniqueId}  sent a {giftName} x{repeatCount} \", \"color\":\"gold\"}",
+            "/title @a subtitle {\"text\":\"ENVIO {giftName} x{repeatCount} \",\"bold\":true,\"color\":\"gold\"}",
+            "/execute at {playername} run summon minecraft:skeleton ~ ~ ~ {CustomName:'{\"text\":\"{uniqueId} \"}', CustomNameVisible:1}",
+            "/title @a title {\"text\":\"{uniqueId} \"}"
+        ],
+        "Finger Heart": [
+            "/tellraw @a {\"text\":\"{uniqueId}  sent a {giftName} x{repeatCount}\", \"color\":\"gold\"}",
+            "/title @a subtitle {\"text\":\"ENVIO {giftName} x{repeatCount} \",\"bold\":true,\"color\":\"gold\"}",
+            "/execute at {playername} run summon minecraft:iron_golem ~ ~ ~ {CustomName:'{\"text\":\"{uniqueId} \"}', CustomNameVisible:1}",
+            "/execute at {playername} run playsound minecraft:entity.player.levelup ambient @p",
+            "/title @a title {\"text\":\"{uniqueId} \"}"
+        ],
+        "Taco": [
+            "/execute at {playername} run fill ~-2 ~ ~-2 ~ ~2 ~ minecraft:tnt hollow",
+            "/execute at {playername} run give @p diamond_leggings{Enchantments:[{id:\"minecraft:protection\",lvl:10}]} 1",
+            "/execute at {playername} run summon minecraft:creeper ~ ~ ~ {CustomName:'{\"text\":\"{uniqueId} \"}', CustomNameVisible:1}",
+            "/execute at {playername} run playsound minecraft:entity.player.levelup ambient @p"
+        ],
+        "Taco ": [
+            "/execute at {playername} run fill ~-2 ~ ~-2 ~ ~2 ~ minecraft:tnt hollow",
+            "/execute at {playername} run give @p diamond_leggings{Enchantments:[{id:\"minecraft:protection\",lvl:10}]} 1",
+            "/execute at {playername} run summon minecraft:creeper ~ ~ ~ {CustomName:'{\"text\":\"{uniqueId} \"}', CustomNameVisible:1}",
+            "/execute at {playername} run playsound minecraft:entity.player.levelup ambient @p"
+        ],
+        "Rosa": [
+            "/title @a subtitle {\"text\":\"ENVIO {giftName} x{repeatCount} \",\"bold\":true,\"color\":\"gold\"}",
+            "/execute at {playername} run summon minecraft:wither_skeleton ~ ~ ~ {CustomName:'{\"text\":\"{uniqueId} \"}', CustomNameVisible:1}",
+            "/execute at {playername} run summon minecraft:blaze ~ ~ ~ {CustomName:'{\"text\":\"{uniqueId} \"}', CustomNameVisible:1}",
+            "/execute at {playername} run playsound minecraft:entity.player.levelup ambient @p"
+        ],
+        "Heart Me": [
+            "/title @a subtitle {\"text\":\"ENVIO {giftName} x{repeatCount} \",\"bold\":true,\"color\":\"gold\"}",
+            "/execute at {playername} run summon minecraft:iron_golem ~ ~ ~ {CustomName:'{\"text\":\"{uniqueId} \"}', CustomNameVisible:1}",
+            "/execute at {playername} run playsound minecraft:entity.player.levelup ambient @p"
+        ],
+        "Panettone GDM 23": [
+            "/title @a subtitle {\"text\":\"ENVIO {giftName} x{repeatCount} \",\"bold\":true,\"color\":\"gold\"}",
+            "/execute at {playername} run summon minecraft:iron_golem ~ ~ ~ {CustomName:'{\"text\":\"{uniqueId} \"}', CustomNameVisible:1}",
+            "/execute at {playername} run playsound minecraft:entity.player.levelup ambient @p"
+        ],
+        "LIVE Fest": [
+            "/title @a subtitle {\"text\":\"ENVIO {giftName} x{repeatCount} \",\"bold\":true,\"color\":\"gold\"}",
+            "/execute at {playername} run summon minecraft:iron_golem ~ ~ ~ {CustomName:'{\"text\":\"{uniqueId} \"}', CustomNameVisible:1}",
+            "/execute at {playername} run playsound minecraft:entity.player.levelup ambient @p"
+        ],
+        "Doughnut": [
+            "/execute at {playername} run fill ~-6 ~ ~-6 ~6 ~10 ~6 minecraft:tnt hollow",
+            "/execute at {playername} run give nglmercer enchanted_golden_apple 1",
+            "/execute at {playername} run give @a diamond_leggings{Enchantments:[{id:\"minecraft:protection\",lvl:10}]} 1",
+            "/execute at {playername} run playsound minecraft:entity.player.levelup ambient @p"
+        ]
+    },
+    "envelope": [
+        "/tellraw @a {\"text\":\"{uniqueId}  comment cofreeeee \", \"color\":\"gold\"}",
+        "/say {uniqueId}  comment cofreeeee",
+        "/execute at {playername} run playsound minecraft:entity.player.levelup ambient @p"
+    ],
+    "subscribe": [
+        "/tellraw @a {\"text\":\"{uniqueId}  subscribe \", \"color\":\"gold\"}",
+        "/say {uniqueId}  subscribe subscribe",
+        "/execute at {playername} run playsound minecraft:entity.player.levelup ambient @p"
+    ],
+    "follow": [
+        "/tellraw @a {\"text\":\"{uniqueId}  te sige \", \"color\":\"gold\"}",
+        "/execute at {playername} run summon minecraft:villager ~ ~ ~ {CustomName:'{\"text\":\"{uniqueId} \"}', CustomNameVisible:1}",
+        "/title @a title {\"text\":\"{uniqueId} \"}",
+        "/title @a subtitle {\"text\":\"te sige \",\"bold\":true,\"color\":\"gold\"}"
+    ],
+    "welcome": [
+        "/give @a torch"
+    ],
+    "share": [
+        "/tellraw @a {\"text\":\"{uniqueId}  compartio \", \"color\":\"gold\"}",
+        "/title @a title {\"text\":\"{uniqueId} \"}",
+        "/title @a subtitle {\"text\":\"compartio \",\"bold\":true,\"color\":\"gold\"}"
+    ],
+    "lastChat": "allen_justallen",
+    "lastFollow": "esteban.hernandez492",
+    "lastShare": "stolas_is_the_best",
+    "Chat": "nathalygarca57",
+    "Welcome": "alexcoc1122",
+    "Share": "jimmmy_2.0",
+    "Follow": "user5793185252630",
+    "lastSubscribe": "ainagigantecomas",
+    "lastWelcome": "l0l0c0"
+}
