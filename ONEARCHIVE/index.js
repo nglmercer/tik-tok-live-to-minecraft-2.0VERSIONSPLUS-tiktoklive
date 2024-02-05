@@ -4,6 +4,7 @@ import cors from 'cors';
 import fs from 'fs';
 import winston from 'winston';
 import mineflayer from 'mineflayer';
+import { WebcastPushConnection } from 'tiktok-live-connector';
 
 const keyplayerName = 'melser';
 const keyBOT = 'melsernglBOT';
@@ -11,6 +12,47 @@ const keySERVER = '127.0.0.1';
 const keySERVERPORT = '25565';
 const app = express();
 
+// Username uniqueID tiktok
+let tiktokUsername = "agraviadit02";
+
+// Create a new wrapper object and pass the username
+let tiktokLiveConnection = new WebcastPushConnection(tiktokUsername);
+
+// Connect to the chat (await can be used as well)
+tiktokLiveConnection.connect().then(state => {
+    console.info(`Connected to roomId ${state.roomId}`);
+}).catch(err => {
+    console.error('Failed to connect', err);
+})
+
+// Define the events that you want to handle
+// In this case we listen to chat messages (comments)
+tiktokLiveConnection.on('chat', data => {
+    console.log(`${data.uniqueId} (userId:${data.nickname}) comenta: ${data.comment}`);
+    handleEvent('chat', data);
+})
+
+// And here we receive gifts sent to the streamer
+tiktokLiveConnection.on('gift', data => {
+    console.log(`${data.uniqueId} (userId:${data.nickname}) envia ${data.giftId}`);
+    handleEvent('gift', data, `${data.uniqueId}:${data.giftName}x${repeatCount} `);
+})
+tiktokLiveConnection.on('follow', (data) => {
+    console.log(data.uniqueId, "te sige!");
+    handleEvent('follow', data);
+})
+tiktokLiveConnection.on('share', (data) => {
+    console.log(data.uniqueId, "compartio el directo!");
+    handleEvent('share', data);
+})
+tiktokLiveConnection.on('streamEnd', (actionId) => {
+    if (actionId === 3) {
+        console.log('Stream ended by user');
+    }
+    if (actionId === 4) {
+        console.log('Stream ended by platform moderator (ban)');
+    }
+})
 let bot;
 let isConnected = false; // Bandera para controlar la conexión
 

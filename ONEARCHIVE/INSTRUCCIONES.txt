@@ -1,0 +1,18 @@
+MINECRAFT INTERACTIVO TIKTOK
+
+REQUIERE QUE SE CONECTE A index.html https://github.com/nglmercer/Tiktok-twitch-tts-mixitup-v2
+
+1 INSTALE POR PRIMERA VEZ Node.js (omita si tiene node js)
+2 ejecute el install.bat para instalar dependencias 1 vez o comando NPM INSTALL EN CMD
+3 modifique el nombre de su BOT opcional Y MODIFIQUE la IP y Puerto PORT del servidor 
+
+TODO LO ANTERIOR SE HACE UNA VEZ 
+
+4 cada vez que este usando inicie start.bat (o node index.js en terminal) 
+
+
+SI QUIERE MODIFICAR LOS REGALOS EN CommandList.json puede verificar la configuracion por defecto
+GIFTS 
+FOLLOW
+LIKES
+ETC
